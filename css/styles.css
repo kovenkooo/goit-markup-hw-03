@@ -4,11 +4,21 @@ body {
     background-color: #fff;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+img {
+    display: flex;
+}
+
 a {
     text-decoration: none;
 }
 
 ul {
+    margin: 0;
+    padding-left: 0;
     list-style-type: none;
 }
 
@@ -16,11 +26,35 @@ button {
     cursor: pointer;
 }
 
+/* .container {
+    max-width: 100%
+    padding-left: 
+    padding-right: 
+    margin-left: 
+    margin-right:
+} */
+
 /* Header */
 
 /* Navigation */
 
-.logo {
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 156px;
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 76px;
+}
+
+.logo-header {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -31,8 +65,14 @@ button {
 }
 
 .logo-studio-header {
-    
     color: #2e2f42;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .navigation-link {
@@ -54,6 +94,16 @@ button {
 
 /* Contacts */
 
+.address-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.address-list-item {
+    box-sizing: border-box;
+}
+
 .contact {
     font-weight: 400;
     font-size: 16px;
@@ -70,10 +120,20 @@ button {
 /* First section */
 
 .first-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
     background: #2e2f42;
 }
 
+.container-first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
 .page-title {
+    max-width: 496px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -89,6 +149,12 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+    border-radius: 4px;
+    min-width: 169px;
+    height: 56px;
 }
 
 .service-button:hover,
@@ -97,6 +163,24 @@ button {
 }
 
 /* Second Section */
+
+.second-section {
+    padding: 120px 156px 120px 156px;
+}
+
+.second-section-title {
+    display: none;
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.advantages-list-item {
+    width: calc((100%-72px)/4);
+}
 
 .advantages-list-title {
     font-weight: 500;
@@ -120,7 +204,18 @@ button {
     background: #f4f4fd;
 }
 
+.third-section {
+    padding: 120px 156px;
+}
+
+.team-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
 .third-section-title {
+    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -137,11 +232,21 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .team-list-item {
-    background: #fff;
+    border-radius: 0 0 4px 4px;
+    padding: 0px 0px 32px 0px;
     background-color: #fff;
+    width: calc((100%-72px)/4);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team-list-content-container {
+    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
 }
 
 .third-section-content {
@@ -155,7 +260,26 @@ button {
 
 /* Fourth Section */
 
+.fourth-section {
+    padding: 120px 156px;
+}
+
+.project-card-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fourth-section-content-card {
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+    padding: 32px 16px;
+}
+
 .fourth-section-title {
+    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -182,13 +306,25 @@ button {
 }
 
 .project-card {
+    width: calc((100%-96px)/6);
     background-color: #fff;
 }
 
 /* Footer */
 
 .footer {
+    padding: 100px 156px;
     background: #2e2f42;
+}
+
+.logo-footer {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
 }
 
 .logo-studio-footer {
@@ -196,9 +332,11 @@ button {
 }
 
 .footer-text {
+    max-width: 264px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    margin-top: 16px;
 }
