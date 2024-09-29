@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 img {
-    display: flex;
+    display: block;
 }
 
 a {
@@ -34,7 +34,18 @@ button {
     margin-right:
 } */
 
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 /* Header */
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
 
 /* Navigation */
 
@@ -42,19 +53,17 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 156px;
-    border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 24px 0;
 }
 
-nav {
+.navigation {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 76px;
 }
 
 .logo-header {
+    margin-right: 76px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -76,6 +85,7 @@ nav {
 }
 
 .navigation-link {
+    padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -120,8 +130,7 @@ nav {
 /* First section */
 
 .first-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 188px 0;
     background: #2e2f42;
 }
 
@@ -143,6 +152,7 @@ nav {
 }
 
 .service-button {
+    border: none;
     background: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
@@ -165,7 +175,21 @@ nav {
 /* Second Section */
 
 .second-section {
-    padding: 120px 156px 120px 156px;
+    padding: 120px 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .second-section-title {
@@ -183,6 +207,7 @@ nav {
 }
 
 .advantages-list-title {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -244,7 +269,7 @@ nav {
 }
 
 .team-list-content-container {
-    margin-top: 32px;
+    padding: 32px 0;
     align-items: center;
     justify-content: center;
 }
@@ -261,7 +286,7 @@ nav {
 /* Fourth Section */
 
 .fourth-section {
-    padding: 120px 156px;
+    padding: 120px 0;
 }
 
 .project-card-list {
@@ -269,6 +294,7 @@ nav {
     gap: 24px;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 48px;
 }
 
 .fourth-section-content-card {
@@ -295,6 +321,7 @@ nav {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .content-card-text {
@@ -306,18 +333,20 @@ nav {
 }
 
 .project-card {
-    width: calc((100%-96px)/6);
+    width: calc((100%-48px)/3);
     background-color: #fff;
 }
 
 /* Footer */
 
 .footer {
-    padding: 100px 156px;
+    padding: 100px 0;
     background: #2e2f42;
 }
 
 .logo-footer {
+    display: inline-block;
+    margin-bottom: 16px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -338,5 +367,4 @@ nav {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    margin-top: 16px;
 }
